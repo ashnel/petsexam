@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+}
+
+h1, h2, p {
+    font-family: Arial;
+}
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: white;}
+
+table tr:hover {background-color: lightgrey;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lightgrey;
+    color: white;
+}
+
+#details {
+    background-color: lightblue;
+    border-radius: 3px;
+    border: none;
+    width: 100px;
+    padding: 5px;
+}
+
+#edit {
+    background-color: lightsalmon;
+    border-radius: 3px;
+    border: none;
+    width: 100px;
+    padding: 5px;
+}

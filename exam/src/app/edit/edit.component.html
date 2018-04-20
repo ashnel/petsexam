@@ -1,0 +1,24 @@
+<h2>Edit this pet</h2>
+
+<form (submit)="updatePet()">
+  Pet Name: <br>
+  <div *ngIf="currentPet" >
+    <input type="text" [(ngModel)]="currentPet.name" name="petName" value="{{ currentPet.name }}" required minlength="3" #petName="ngModel"><br>
+    Pet Type: <br>
+    <input type="text" [(ngModel)]="currentPet.type" name="petType" value="{{ currentPet.type }}" required minlength="3" #petType="ngModel"><br>
+    Description: <br>
+    <input type="text" [(ngModel)]="currentPet.description" name="petDesc" value="{{ currentPet.description }}" required minlength="3" #petDesc="ngModel"><br>
+    Skills (optional): <br>
+    <div style="display: inline-block" *ngFor="let skill of currentPet.skills">
+      Skill 1: <input type="text" [(ngModel)]="currentPet.skills[0].skill1" value="gres" name="skill1"><br>
+      Skill 2: <input type="text" [(ngModel)]="currentPet.skills[0].skill2" value="{{ skill.skill2 }}" name="skill2"><br>
+      Skill 3:  <input type="text" [(ngModel)]="currentPet.skills[0].skill3" value="{{ skill.skill3 }}" name="skill3"><br>
+    </div><br><br>
+    <input id="button" [routerLink]="['/home']" type="submit" value="Cancel">
+    <input id="button" type="submit" value="Submit">
+    <div *ngIf="!petName.valid"><p>Please enter a name at least 3 characters long.</p></div>
+    <div *ngIf="!petType.valid"><p>Please enter a type at least 3 characters long.</p></div>
+    <div *ngIf="!petDesc.valid"><p>Please enter a description at least 3 characters long.</p></div>
+    <div *ngIf="errors"><p>{{ errors }}</p></div>
+</div>
+</form>

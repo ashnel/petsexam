@@ -1,0 +1,20 @@
+<h2>Know of a pet needing a home?</h2>
+
+<form id="form" (submit)="addNewPet()">
+  Name: <br>
+  <input type="text" [(ngModel)]="newPet.name" name="petName" required minlength="3" #petName="ngModel"><br>
+  Pet Type: <br>
+  <input type="text" [(ngModel)]="newPet.type" name="petType" required minlength="3" #petType="ngModel"><br>
+  Description: <br>
+  <input type="text" [(ngModel)]="newPet.desc" name="petDesc" required minlength="3" #petDesc="ngModel"><br>
+  Skills (optional): <br>
+  Skill 1: <input type="text" [(ngModel)]="newPet.skill1" name="skill1"><br>
+  Skill 2: <input type="text" [(ngModel)]="newPet.skill2" name="skill2"><br>
+  Skill 3:  <input type="text" [(ngModel)]="newPet.skill3" name="skill3"><br><br>
+  <input id="button" [routerLink]="['/home']" type="submit" value="Cancel">
+  <input id="button" type="submit" value="Add Pet">
+  <div id="error" *ngIf="!petName.valid"><p>Please enter a name at least 3 characters long.</p></div>
+  <div id="error" *ngIf="!petType.valid"><p>Please enter a type at least 3 characters long.</p></div>
+  <div id="error" *ngIf="!petDesc.valid"><p>Please enter a description at least 3 characters long.</p></div>
+  <div id="error" *ngIf="errors"><p>{{ errors }}</p></div>
+</form>

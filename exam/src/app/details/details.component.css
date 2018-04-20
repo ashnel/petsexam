@@ -1,0 +1,23 @@
+#vote {
+    background-color: lightblue;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#adopt {
+    background-color: lightgreen;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+body {
+    font-family: Arial;
+}
+
+h1, h2, p {
+    font-family: Arial;
+}

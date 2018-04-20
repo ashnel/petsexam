@@ -1,0 +1,20 @@
+<a [routerLink]="['/home']">Home</a>
+<div *ngIf="currentPet">
+  <h2>Details about {{ currentPet.name }}</h2>
+
+  <h2 style="display: inline-block">Pet Type:</h2>
+  <p style="display: inline-block">{{ currentPet.name }}</p><br>
+  <h2 style="display: inline-block">Description:</h2>
+  <p style="display: inline-block">{{ currentPet.description }}</p><br>
+  <h2 style="display: inline-block">Skills:</h2>
+    <div style="display: inline-block" *ngFor="let skill of currentPet.skills">
+      <p *ngIf="skill.skill1">{{ skill.skill1 }}</p>
+      <p *ngIf="skill.skill2">{{ skill.skill2 }}</p>
+      <p *ngIf="skill.skill3">{{ skill.skill3 }}</p>
+    </div><br>
+  <h2 style="display: inline-block">Likes:</h2>
+  <p style="display: inline-block">{{ currentPet.likes }}</p><br>
+
+  <button id="vote" onclick="this.disabled=true" (click)="likePet(currentPet)">Like this pet</button>
+  <button id="adopt" (click)="adopt(currentPet)">Adopt this pet!</button>
+</div>

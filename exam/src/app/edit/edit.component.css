@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+}
+
+h1, h2, p {
+    font-family: Arial;
+}
+
+#button {
+    padding: 10px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+#error {
+    color: purple;
+}
+
+input[type=text] {
+    border-radius: 5px;
+}
